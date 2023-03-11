@@ -1,12 +1,12 @@
-import './App.css';
 
+import { AppContext } from './context/contextApi';
 function App() {
   return (
-    <div className="App">
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-    </div>
+    <AppContext>
+      <div className='text-3xl font-bold'>
+        <h1>App</h1>
+      </div>
+    </AppContext>
   );
 }
 

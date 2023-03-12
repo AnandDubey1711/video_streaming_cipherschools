@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react'
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 
-import ytLogo from '../images/yt-logo.png';
+import ytLogo from '../images/vid-stream-low-resolution-color-logo.png';
 import ytLogoMobile from '../images/yt-logo-mobile.png';
 
 import { SlMenu } from "react-icons/sl";

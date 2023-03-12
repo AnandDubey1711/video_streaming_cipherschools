@@ -11,6 +11,7 @@ import SuggestionVideoCard from "./SuggestionVideoCard";
 
 const VideoDetails = () => {
     const [video, setVideo] = useState();
+    
     const [relatedVideos, setRelatedVideos] = useState();
     const { id } = useParams();
     const { setLoading } = useContext(Context);
@@ -19,6 +20,7 @@ const VideoDetails = () => {
         document.getElementById("root").classList.add("custom-h");
         fetchVideoDetails();
         fetchRelatedVideos();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
@@ -30,6 +32,7 @@ const VideoDetails = () => {
             setLoading(false);
         });
     };
+    
 
     const fetchRelatedVideos = () => {
         setLoading(true);
@@ -97,6 +100,9 @@ const VideoDetails = () => {
                         </div>
                     </div>
                 </div>
+
+                
+            </div>
                 <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
                     {relatedVideos?.contents?.map((item, index) => {
                         if (item?.type !== "video") return false;
@@ -108,8 +114,9 @@ const VideoDetails = () => {
                         );
                     })}
                 </div>
+           
             </div>
-        </div>
+      
     );
 };
 

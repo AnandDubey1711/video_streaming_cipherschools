@@ -1,8 +1,15 @@
 import React from 'react'
 
-const LeftNavMenuItem = () => {
+const LeftNavMenuItem = ({text,icon, className, action}) => {
   return (
-    <div>leftNavMenuItem</div>
+    <div
+            className={
+              "text-white text-sm cursor-pointer h-10 flex items-center px-3 mb-[1px] rounded-lg hover:bg-white/[0.10] "
+            + className}
+            onClick={action} >
+        <span className="text-xl mr-5">{icon}</span>
+            {text}
+        </div>
   )
 }
 
